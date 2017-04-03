@@ -63,7 +63,7 @@ function broadcast (event) {
     args.unshift(event)
 
   
-    Object.keys(emitters).forEach((emitterId) => {
+    Object.keys(emitters).forEach(function (emitterId) {
       const emitter = emitters[emitterId]
       emitter.emit.apply(emitter, args)
     })
